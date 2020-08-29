@@ -37,11 +37,29 @@ The transmission occurs at the rate of 1Kbps – 10Kbps. This low-cost RF transm
 
 First the arduino nano installed in a small bread board and then configured the FS100A transmitter with it. The VCC pin (positive) connected to 3.3v of Arduino NANO, GND pin (negative) connected with GND of Arduino NANO and finally the DATA pin connected to the digital pin 4 of Arduino NANO.
 
+Let's code:
+
+```
+void setup(){
+}
+void loop(){
+  tone(4, 15000); //digital pin 4
+}
+```
+
+Explaining the code: Void set is used to declare the setup which are going to be used next in the code and in Void loop the provided code iterate. The // is used for commenting. The tone() function is used to generate square wave.
+
+* Syntax
+tone(pin, frequency)
+
+* Parameters
+Pin: the pin on which to generate the tone (Here Digital Pin 4 of Arduino nano) Frequency: the frequency of the tone in hertz. (Here it is 1500)
+
+>Here Arduino ide used to compile and upload the code to arduino nano. The jammer is now ready.
+![Arduino ide]({{site.baseurl}}/assets/img/arduino-program.png)
 
 
-
-
-
-
+The real view of the jammer.
+![433jammer]({{site.baseurl}}/assets/img/433MHZ-jammer.png)
 
 
