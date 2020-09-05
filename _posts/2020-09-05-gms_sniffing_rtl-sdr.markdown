@@ -26,16 +26,17 @@ So Let’s start...
 
 Before starting the necessary tool(software) installation, update and upgrade the OS.
 
-‘’’
+```
 apt-get update
 apt-get upgrade Or apt upgrade
-‘’’
+
+```
 
 Let’s start Installing the Necessary environmental software..
 
 * Install Kalibrate : ( For finding GSM frequencies )
 
-‘’’
+```
 apt-get install kalibrate-rtl
 
 OR
@@ -47,15 +48,17 @@ cd kalibrate-rtl
 ./configure
 make
 sudo make install
-‘’’
+
+```
 
 * Install Gr GSM : ( For receiving GSM transmissions )
 
-‘’’
+```
 sudo add-apt-repository -y ppa:ptrkrysik/gr-gsm
 sudo apt update
 sudo apt install gr-gsm
-‘’’
+
+```
 
 
-![Arduino nano]({{site.baseurl}}/assets/img/Arduino-nano.png
+![Arduino nano]({{site.baseurl}}/assets/img/Arduino-nano.png)
