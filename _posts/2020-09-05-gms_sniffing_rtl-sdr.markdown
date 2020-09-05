@@ -7,58 +7,55 @@ img: IMG_5866.jpg # Add image post (optional)
 tags: [rtl-sdr, SDR, GSM] # add tag
 ---
 
-Remote keyless Systems (RKS) is a very important element of automotive security of those days.These systems permits a user to lock and unlock the automotive instead of the mechanical key by clicking a button on the key fob close to the automotive. Though different automotive brands uses different frequencies, there area unit in the main 2 totally different frequencies adopted world- wide: 315MHz for North America for 433.92
+GSM stands for Global System for Mobile communication. A recent repot shows That 46% of Global Mobile Users Use 2G and 3G. 
+GSM(2G standard) is combination of FDMA (Frequency Division Multiple Access), TDMA (Time Division Multiple Access) spectrum sharing. At first, GSM use two frequency bands of 25 MHz width : 890 to 915 MHz frequency band for up-link and 935 to 960 MHz frequency for down-link. Later on, two 75 MHz band were added. 1710 to 1785 MHz for up-link and 1805 to 1880 MHz for down-link. up-link is the link from ground station to a satellite and down-link is the link from a satellite down to one or more ground stations or receivers. GSM divides the 25 MHz band into 124 channels each having 200 KHz width and remaining 200 KHz is left unused as a guard band to avoid interference.
 
-As this attack is intended to jamming the RKS communication but here we are also focusing the 433mhz frequency. So let's proceed.....
+We will not go deep with the Architecture of GSM, because I am adding a basic reference link....
 
-## The Jammer(Prerequisite)
+## IMSI Sniffer
 
-A jammer is a device that transmits a stronger interfering signals called noise and prevent a radio frequency or band of radio frequency from use by the valid user.
+IMSI stands for International Mobile Subscriber Identity is a unique number, usually fifteen digits, associated with Global System for Mobile Communications (GSM) to identifying a GSM subscriber.
 
-For this project, we are using Arduino nano and a FS1000A transmitter(other 433/315MHZ transmitter modules can be used).
+The IMSI number is securely stored in SIM card and only known to the service provider to identify the subscription. While the  Mobile Station International Subscriber Directory Number (MSISDN) / Internationally identified mobile phone number the public part of the mapping.
 
-As the replacement of Arduino Nano below can be used.
-Arduino UNO, Arduino Mega, All adruino boards, Teensy boards, Raspberry pi computers. The best one is ATtiny85 USB board, which has by default USB interface, small in size makes it handy.
+So Let’s start...
 
-### Arduino Nano
+### Requirements 
+* Any SDR  ( here the Rtl-sdr being used. HackRf One, BladRf & USRP can be used)
+* Any Linux OS( Here the Parrot OS being used. Kali linux, Ubuntu, Raspbian Os...... can be used)
 
-The Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328P (Arduino Nano 3.x). It has more or less the same functionality of the Arduino Duemilanove, but in a different package. It lacks only a DC power jack, and works with a Mini-B USB cable instead of a standard one.
+Before starting the necessary tool(software) installation, update and upgrade the OS.
 
-![Arduino nano]({{site.baseurl}}/assets/img/Arduino-nano.png)
+‘’’
+apt-get update
+apt-get upgrade Or apt upgrade
+‘’’
 
-### FS1000A Transmitter
+Let’s start Installing the Necessary environmental software..
 
-This is FS1000A 433mHz Tx RF Radio Module. This RF module comprises of an RF Transmitter. The transmitter operates at a frequency of 433.92 and 315 MHz. An RF transmitter receives serial data and transmits it wirelessly through RF through its antenna connected at pin4.
-The transmission occurs at the rate of 1Kbps – 10Kbps. This low-cost RF transmitter can be used to transmit signal up to 100 meters (the antenna design, working environment, and supply voltage will seriously impact the effective distance). The operating voltage of the transmitter is 3-5v DC.
+* Install Kalibrate : ( For finding GSM frequencies )
 
-![FS1000A Transmitter]({{site.baseurl}}/assets/img/FS1000A-Transmitter.png)
+‘’’
+apt-get install kalibrate-rtl
 
-## Let's Design The Jammer
+OR
 
-First the arduino nano installed in a small bread board and then configured the FS100A transmitter with it. The VCC pin (positive) connected to 3.3v of Arduino NANO, GND pin (negative) connected with GND of Arduino NANO and finally the DATA pin connected to the digital pin 4 of Arduino NANO.
+sudo apt install build-essential libtool automake autoconf librtlsdr-dev libfftw3-dev
+git clone https://github.com/steve-m/kalibrate-rtl
+cd kalibrate-rtl
+./bootstrap && CXXFLAGS='-W -Wall -O3'
+./configure
+make
+sudo make install
+‘’’
 
-Let's code:
+* Install Gr GSM : ( For receiving GSM transmissions )
 
-```
-void setup(){
-}
-void loop(){
-  tone(4, 15000); //digital pin 4
-}
-```
-
-Explaining the code: Void set is used to declare the setup which are going to be used next in the code and in Void loop the provided code iterate. The // is used for commenting. The tone() function is used to generate square wave.
-
-* Syntax
-tone(pin, frequency)
-
-* Parameters
-Pin: the pin on which to generate the tone (Here Digital Pin 4 of Arduino nano) Frequency: the frequency of the tone in hertz. (Here it is 1500)
-
->Here Arduino ide used to compile and upload the code to arduino nano. The jammer is now ready.
-![Arduino ide]({{site.baseurl}}/assets/img/arduino-program.png)
+‘’’
+sudo add-apt-repository -y ppa:ptrkrysik/gr-gsm
+sudo apt update
+sudo apt install gr-gsm
+‘’’
 
 
-The real view of the jammer.
-![433jammer]({{site.baseurl}}/assets/img/433MHZ-jammer.png)
-
+![Arduino nano]({{site.baseurl}}/assets/img/Arduino-nano.png
