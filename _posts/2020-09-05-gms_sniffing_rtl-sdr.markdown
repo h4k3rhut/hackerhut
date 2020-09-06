@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rtl-SDR GSM/IMSI Sniffer & Cell Triangulation
+title: Rtl-SDR GSM/IMSI Sniffer & GeoLocation Tracking by Cell Triangulation
 date: 2020-09-05 00:00:00 +0700
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: IMG_5866.jpg # Add image post (optional)
@@ -10,7 +10,7 @@ tags: [rtl-sdr, SDR, GSM] # add tag
 GSM stands for Global System for Mobile communication. A recent repot shows That 46% of Global Mobile Users Use 2G and 3G. 
 GSM(2G standard) is combination of FDMA (Frequency Division Multiple Access), TDMA (Time Division Multiple Access) spectrum sharing. At first, GSM use two frequency bands of 25 MHz width : 890 to 915 MHz frequency band for up-link and 935 to 960 MHz frequency for down-link. Later on, two 75 MHz band were added. 1710 to 1785 MHz for up-link and 1805 to 1880 MHz for down-link. up-link is the link from ground station to a satellite and down-link is the link from a satellite down to one or more ground stations or receivers. GSM divides the 25 MHz band into 124 channels each having 200 KHz width and remaining 200 KHz is left unused as a guard band to avoid interference.
 
-We will not go deep with the Architecture of GSM, because I am adding a basic reference link....
+We will not go deep with the Architecture of GSM, [Here is more information](https://en.m.wikipedia.org/wiki/GSM).
 
 ## IMSI Sniffer
 
@@ -21,7 +21,8 @@ The IMSI number is securely stored in SIM card and only known to the service pro
 So Let’s start...
 
 ### Requirements 
-* Any SDR  ( here the Rtl-sdr being used. HackRf One, BladRf & USRP can be used)
+* Any SDR ( Here the NooElect mini 2+ Rtl-sdr being used. HackRf One, BladRf & USRP can be used)
+* Anteena ( Here a multi purpose anteena being used. More specific/better Anteena for more coverage & result)
 * Any Linux OS( Here the Parrot OS being used. Kali linux, Ubuntu, Raspbian Os...... can be used)
 
 Before starting the necessary tool(software) installation, update and upgrade the OS.
