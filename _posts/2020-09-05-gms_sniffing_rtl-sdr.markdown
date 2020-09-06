@@ -94,4 +94,13 @@ It's time to get the IMSI. The simplest and tricky way is to use wireshark.
 
 ![Grgsm livemon]({{site.baseurl}}/assets/img/wireshark_traffic-gsm.png)
 
-But we will use an program to capture the IMSI and other information in a systematic manner
+But we will use an program to capture the IMSI and other information in a systematic manner. We will get the below information along with the IMSI from the program.
+
+##### MCC : Mobile country code.
+##### MNC : Mobile network code.
+##### CellID : Cell identifier, in hexadecimal format.
+##### LAC : Location area code, in hexadecimal format.
+
+### IMSI-Catcher
+
+Let's download the program from 
