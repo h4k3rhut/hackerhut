@@ -67,13 +67,13 @@ kal -s GSM900
 
 ```
 
->kal: Scanning for GSM-900 base stations.
-        chan: 25 (940.0MHz - 492Hz)	power: 170562.29
-	chan: 29 (940.8MHz - 249Hz)	power: 32624.69
-	chan: 31 (941.2MHz - 168Hz)	power: 45288.13
-	chan: 95 (954.0MHz - 592Hz)	power: 43049.88
-	chan: 98 (954.6MHz -  26Hz)	power: 124469.19
-	chan: 107 (956.4MHz +  19Hz)	power: 34849.87
+>kal: Scanning for GSM-900 base stations.\
+        chan: 25 (940.0MHz - 492Hz)	power: 170562.29\
+	chan: 29 (940.8MHz - 249Hz)	power: 32624.69\
+	chan: 31 (941.2MHz - 168Hz)	power: 45288.13\
+	chan: 95 (954.0MHz - 592Hz)	power: 43049.88\
+	chan: 98 (954.6MHz -  26Hz)	power: 124469.19\
+	chan: 107 (956.4MHz +  19Hz)	power: 34849.87\
 
 This is the time to capture gsm traffic using gr-gsm on frequency of your any gsm base station which we get from previous(kalibrate).
 
@@ -96,10 +96,10 @@ It's time to get the IMSI. The simplest and tricky way is to use wireshark.
 
 But we will use an program to capture the IMSI and other information in a systematic manner. We will get the below information along with the IMSI from the program.
 
-**MCC : Mobile country code.**
-**MNC : Mobile network code.**
-**CellID : Cell identifier, in decimal format.**
-**LAC : Location area code, in hexadecimal format.**
+**MCC : Mobile country code.**\
+**MNC : Mobile network code.**\
+**CellID : Cell identifier, in decimal format.**\
+**LAC : Location area code, in hexadecimal format.**\
 
 ### IMSI-Catcher
 
@@ -117,6 +117,10 @@ pip3 install numpy...
 ```
 Start the the program..Check the below Screenshot..
 
-![wireshark]({{site.baseurl}}/assets/img/wireshark_traffic-gsm.png)
+![wireshark]({{site.baseurl}}/assets/img/%20IMSI-%20sniff.png)
+
+**Boom we got our stuffs**
+
+
 
 
