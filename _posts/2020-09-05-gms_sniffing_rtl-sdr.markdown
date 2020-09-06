@@ -64,7 +64,6 @@ Now we need a gsm frequency on which to imsi and other informations. By using ka
 
 ```
 kal -s GSM900
-
 ```
 
 >kal: Scanning for GSM-900 base stations.\
@@ -80,9 +79,7 @@ This is the time to capture gsm traffic using gr-gsm on frequency of your any gs
 ```
 grgsm livemon -f <your_frequency>M
 
-Example :
-
-grgsm livemon -f 940.0M
+Example : grgsm livemon -f 940.0M
 
 ```
 
@@ -127,7 +124,7 @@ Cell triangulation is a method by which the location of a radio transmitter can
 
 [For more info about Cell Trangulation](https://4n6.com/cell-phone-triangulation/)
 
-> To find out the geo location, there are lot of mathematical calculations behind the scene. So using the information, harvested from previous step the geographic location can be found without any extra job .. Visit [CellId](https://opencellid.org/#zoom=16&lat=37.77888&lon=-122.41943)
+> **To find out the geo location, there are lot of mathematical calculations behind the scene. So using the information, harvested from previous step the geographic location can be found without any extra job .. Visit** [Cellid](https://opencellid.org/#zoom=16&lat=37.77888&lon=-122.41943)
 
 
 
