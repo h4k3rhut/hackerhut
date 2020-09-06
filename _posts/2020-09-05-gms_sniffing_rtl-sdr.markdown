@@ -92,15 +92,31 @@ If the output comes gsm packets, means like the below screenshot(with continuous
 
 It's time to get the IMSI. The simplest and tricky way is to use wireshark.
 
-![Grgsm livemon]({{site.baseurl}}/assets/img/wireshark_traffic-gsm.png)
+![wireshark]({{site.baseurl}}/assets/img/wireshark_traffic-gsm.png)
 
 But we will use an program to capture the IMSI and other information in a systematic manner. We will get the below information along with the IMSI from the program.
 
-##### MCC : Mobile country code.
-##### MNC : Mobile network code.
-##### CellID : Cell identifier, in hexadecimal format.
-##### LAC : Location area code, in hexadecimal format.
+**MCC : Mobile country code.**
+**MNC : Mobile network code.**
+**CellID : Cell identifier, in decimal format.**
+**LAC : Location area code, in hexadecimal format.**
 
 ### IMSI-Catcher
 
-Let's download the program from 
+Let's download the program and install it's dependancy.
+
+```
+git clone https://github.com/Oros42/IMSI-catcher.git
+Or
+wget https://github.com/Oros42/IMSI-catcher/archive/master.zip && unzip -q master.zip
+
+sudo apt install python3-numpy python3-scipy python3-scapy
+Or
+pip3 install numpy...
+
+```
+Start the the program..Check the below Screenshot..
+
+![wireshark]({{site.baseurl}}/assets/img/wireshark_traffic-gsm.png)
+
+
