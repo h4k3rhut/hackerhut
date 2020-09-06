@@ -60,5 +60,38 @@ sudo apt install gr-gsm
 
 ```
 
+Now we need a gsm frequency on which to imsi and other informations. By using kalibrate we will get all the nearest gsm base stations frequencies.
 
-![Arduino nano]({{site.baseurl}}/assets/img/Arduino-nano.png)
+```
+kal -s GSM900
+
+```
+
+>kal: Scanning for GSM-900 base stations.
+        chan: 25 (940.0MHz - 492Hz)	power: 170562.29
+	chan: 29 (940.8MHz - 249Hz)	power: 32624.69
+	chan: 31 (941.2MHz - 168Hz)	power: 45288.13
+	chan: 95 (954.0MHz - 592Hz)	power: 43049.88
+	chan: 98 (954.6MHz -  26Hz)	power: 124469.19
+	chan: 107 (956.4MHz +  19Hz)	power: 34849.87
+
+This is the time to capture gsm traffic using gr-gsm on frequency of your any gsm base station which we get from previous(kalibrate).
+
+```
+grgsm livemon -f <your_frequency>M
+
+Example :
+
+grgsm livemon -f 940.0M
+
+```
+
+If the output comes gsm packets, means like the below screenshot(with continuous packet falling) then continue to next else change frequency and try.
+
+![Grgsm livemon]({{site.baseurl}}/assets/img/grgzsm-livemon.png)
+
+It's time to get the IMSI. The simplest and tricky way is to use wireshark.
+
+![Grgsm livemon]({{site.baseurl}}/assets/img/wireshark_traffic-gsm.png)
+
+But we will use an program to capture the IMSI and other information in a systematic manner
