@@ -2,7 +2,7 @@
 layout: post
 title: Installation of METASPLOIT in Raspberry-pi 3/Zero with Raspbian
 date: 2017-12-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: Steps to install Metasploit in a raspberry pi 0/3 with raspbian OS. # Add post description (optional)
 img: RaspberianOS-Metasploit.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry-pi, Metasploit]
