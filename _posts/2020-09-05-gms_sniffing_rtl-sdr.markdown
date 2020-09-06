@@ -2,7 +2,7 @@
 layout: post
 title: Rtl-SDR GSM/IMSI Sniffer & GeoLocation Tracking by Cell Triangulation
 date: 2020-09-05 00:00:00 +0700
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: Sniffing the IMSI with a Rtl-sdr and tracking the cell. # Add post description (optional)
 img: IMG_5866.jpg # Add image post (optional)
 tags: [rtl-sdr, SDR, GSM] # add tag
 ---
