@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rtl-SDR GSM/IMSI Sniffer
+title: Rtl-SDR GSM/IMSI Sniffer & Cell Triangulation
 date: 2020-09-05 00:00:00 +0700
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: IMG_5866.jpg # Add image post (optional)
@@ -99,7 +99,7 @@ But we will use an program to capture the IMSI and other information in a system
 **MCC : Mobile country code.**\
 **MNC : Mobile network code.**\
 **CellID : Cell identifier, in decimal format.**\
-**LAC : Location area code, in hexadecimal format.**\
+**LAC : Location area code, in hexadecimal format.**
 
 ### IMSI-Catcher
 
@@ -117,9 +117,21 @@ pip3 install numpy...
 ```
 Start the the program..Check the below Screenshot..
 
-![wireshark]({{site.baseurl}}/assets/img/%20IMSI-%20sniff.png)
+![ImsiCatcher]({{site.baseurl}}/assets/img/%20IMSI-%20sniff.png)
 
 **Boom we got our stuffs**
+
+### Cell Triangulation
+
+Cell triangulation is a method by which the location of a radio transmitter can be determined by measuring either the radial distance, or the direction, of the received signal from two or three different cell towers for locating a mobile phone. It’s similar to GPS location tracking but less accurate. Some cases the method can mark the exact geographic position of a user. The mobile phone generally try to connect the nearest cell tower by emitting signal. The location of the  mobile device is adjudged through how strong the signal is sent to each of the cell tower.
+
+[For more info about Cell Trangulation](https://4n6.com/cell-phone-triangulation/)
+
+> To find out the geo location, there are lot of mathematical calculations behind the scene. So using the information, harvested from previous step the geographic location can be found without any extra job .. Visit [CellId](https://opencellid.org/#zoom=16&lat=37.77888&lon=-122.41943)
+
+
+
+**The above is only for Educational**
 
 
 
