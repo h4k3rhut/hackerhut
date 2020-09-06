@@ -19,7 +19,7 @@ social-email: ankush.h4k3rhut@icloud.com # add your Email address
 discus-identifier: h4k3rhut # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: https://www.googletagmanager.com/gtag/js?id=UA-177345232-2 # Google Analytics
 
 # Build Settings
 markdown: kramdown
