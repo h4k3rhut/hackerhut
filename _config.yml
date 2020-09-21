@@ -1,8 +1,8 @@
 title: Hello, Wellcome to Hackerhut
 description: We are Software Security Professionals passionate about AppSec, IoT, Hardware & Wireless Security.
 permalink: ':title/'
-baseurl: "/hackerhut" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://hackerhut.in" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
